@@ -5,6 +5,7 @@ import Section from './components/Section';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import './App.css';
+import { Login } from "./components/login/index"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
 
         <Redirect to="/" />
       </Switch>
+      {/* <Login /> */}
     </div>
   );
 }

@@ -8,7 +8,7 @@ const LoginPage = () => {
     }
     return (
         <div className="login_button">
-            <GoogleLogin
+            {/* <GoogleLogin
                 clientId={config.CLIENT_ID}
                 isSignedIn={true}
                 buttonText="Login"
@@ -16,7 +16,7 @@ const LoginPage = () => {
                 onFailure={responseGoogle}
                 scope="https://www.googleapis.com/auth/youtube"
                 cookiePolicy={"single_host_origin"}
-            />
+            /> */}
         </div>
     )
 }
