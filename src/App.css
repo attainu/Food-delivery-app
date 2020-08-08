@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oregano&display=swap');
+.App{
+  background:rgb(20, 20, 20);
+  color:white;
+}
+.pro{
+  list-style-type: none;
+  text-decoration:none;
+  font-family: 'Oregano', cursive;
+  margin-right:20px;
+}
+.react{
+  font-family: 'Nunito', sans-serif;
+}
+*{
+  margin:0;
+  box-sizing:border-box;
+  padding:0;
+}
+.links{
+position:absolute;
+left:60%;
+margin-top:-50px;
+}
+.mr-auto{
+  position:absolute;
+left:90%;
+margin-top:-50px;
+}
+.section{
+  position:absolute;
+  left:50%;
+  margin-top:-1px;
+}
+.title{
+  font-family: 'Nunito', sans-serif;
+  position:absolute;
+  right:65%;
+  margin-top:-1px;
+}
