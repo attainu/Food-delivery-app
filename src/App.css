@@ -1,42 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oregano&display=swap');
-
-.App{
-  background:rgb(20, 20, 20);
-  color:white;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
 .pro{
   list-style-type: none;
   text-decoration:none;
   font-family: 'Oregano', cursive;
-  margin-right:20px;
+  margin-right:10px;
 }
-.react{
+.react,.subline{
   font-family: 'Nunito', sans-serif;
+  color:rgb(48, 182, 48);
+}
+.material-icons{
+ color:rgb(48, 182, 48);
+
 }
 *{
   margin:0;
   box-sizing:border-box;
   padding:0;
 }
-.links{
-position:absolute;
-left:60%;
-margin-top:-50px;
+.footertext{
+  font-family: 'Roboto', sans-serif;
 }
-.mr-auto{
-  position:absolute;
-left:90%;
-margin-top:-50px;
-}
-.section{
-  position:absolute;
-  left:50%;
-  margin-top:-1px;
-}
+
 .title{
   font-family: 'Nunito', sans-serif;
-  position:absolute;
-  right:65%;
-  margin-top:-1px;
+
 }
+.card{
+  width:38rem;
+}
+@media only screen and (max-width: 600px) {
+  .man-delievering{
+    display:none
+  }
+  .section-body{
+    display:flex;
+    flex-wrap:wrap;
+    width:30rem;
+  }
+  .card{
+    width:30rem;
+  }
+}
+

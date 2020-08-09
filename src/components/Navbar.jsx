@@ -1,6 +1,5 @@
 import React from 'react';
 import config from "../config";
-import { Navbar, Nav, NavItem } from 'reactstrap';
 import { NavLink, Link } from "react-router-dom";
 import { GoogleLogout } from 'react-google-login';
 import '../App.css';
@@ -11,32 +10,43 @@ const MtubeNavbar = props => {
     const handleLogoutSuccess = res => {
         console.log(res);
     }
-    return (
-        <Navbar color="light" light espand="md" className="nav">
-            <Link className="react" to="/" style={{ "color": "green", "fontSize": "45px", "fontWeight": "600", "textDecoration": "none", "margin": "45px" }}>Foodify</Link>
-            <div className="links"><NavLink className="pro" to="/profile" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Hello,Gigib Hadid</NavLink>
+    return (<>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
 
-                <NavLink className="pro" to="/orders" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Orders</NavLink>
+            <h2 class="material-icons" style={{ "fontSize": "45px", "textDecoration": "none", "marginLeft": "4%", "marginRight": "1%", "paddingTop": "0.5rem" }}>
+                emoji_food_beverage
+</h2>
+            <Link class="navbar-brand" className="react" to="/" style={{ "fontSize": "45px", "fontWeight": "600", "marginRight": "40%", "textDecoration": "none" }}> Foodify</Link>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 
-                <NavLink className="pro" to="/Cart" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Cart</NavLink>
-            </div>
-            <Nav className="mr-auto" navbar>{!props.user === null ?
+                <a href="#" style={{ "color": "white", "marginLeft": "1rem" }} > Hello, Gigib Hadid </a>
+                <a href="#" style={{ "color": "white", "marginLeft": "1rem" }} > Orders </a>
+                <a href="#" style={{ "color": "white", "marginLeft": "1rem" }} > Cart </a>
 
-                (<NavItem>
-                    <NavLink to="/login">Login</NavLink>
-                </NavItem>) :
-                <>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" style={{ "color": "white" }}>
 
+                    <NavLink class="nav-item nav-link active pro" href="#" className="pro" to="/profile" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Hello,Gigib Hadid <span class="sr-only">(current)</span></NavLink >
+                    <NavLink class="nav-item nav-link pro" href="#" className="pro" to="/orders" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Orders</NavLink>
 
-                    <div className="logout_button">
+                    <NavLink class="nav-item nav-link pro" href="#" className="pro" to="/Cart" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Cart</NavLink>
+                    <div className="logout_button" class="nav-item nav-link logout_button">
                         <GoogleLogout clientId={config.CLIENT_ID}
                             buttonText="Logout"
                             onLogoutSuccess={handleLogoutSuccess}
                             onFailure={handleLogoutFailure} />
                     </div>
-                </>}
-            </Nav >
-        </Navbar >
+
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+    </>
     );
 };
 
