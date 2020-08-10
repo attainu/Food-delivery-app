@@ -1,22 +1,56 @@
-import React from 'react';
-import { GoogleLogin } from 'react-google-login';
-import config from '../config';
+import React, { useState } from 'react';
+import '../App.css'
+import './Login.css'
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../firebase";
+import loginImg from "../undraw_hey_email_liaa.svg"
 
-const LoginPage = () => {
-    const responseGoogle = response => {
-        console.log(response);
+function LoginPage() {
+    const history = useHistory();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const login = event => {
+        event.preventDefault();//this stops refresh
+        //do the login logic...
+
+        auth.signInWithEmailAndPassword(email, password)
+        .then((auth) => {
+            // logged in, redirect to homepage...
+            history.push("/");
+        })
     }
+
+    const register = (event) => {
+        event.preventDefault();//this stops refresh!!!
+        // do the register logic
+        
+        auth.createUserWithEmailAndPassword(email, password)
+        .then(auth => {
+            //created a user and logged in, redirect to home page
+            history.push("/")
+        })
+        .catch((e) => alert(e.message));
+    }
+
     return (
-        <div className="login_button">
-            {/* <GoogleLogin
-                clientId={config.CLIENT_ID}
-                isSignedIn={true}
-                buttonText="Login"
-                onSuccess={responseGoogle}
-                onFailure={responseGoogle}
-                scope="https://www.googleapis.com/auth/youtube"
-                cookiePolicy={"single_host_origin"}
-            /> */}
+        <div className="login">
+            <h3>LoginPage</h3>
+
+            <div className="login__container">
+            <img height="250px" src="https://edfone.com/themes/edbox/images/sl-avatar.svg" alt=""/> 
+                <h1>User Login</h1>
+       
+                <form>
+                    <h5>E-mail</h5>
+                    <input value={email} onChange={event => setEmail(event.target.value)} type="email" />
+                    <h5>Password</h5>
+                    <input value={password} onChange={event => setPassword(event.target.value)} type="password" />
+                    <button onClick={login} type="submit" className="login__signInButton">Sign In</button>                                    
+                </form>
+                <br/>
+                <button onClick={register} className="login__registerButton">Don't have an account?sign up here</button>
+            </div>        
         </div>
     )
 }

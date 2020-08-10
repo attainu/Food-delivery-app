@@ -1,7 +1,6 @@
 import React from 'react';
 import config from "../config";
 import { NavLink, Link } from "react-router-dom";
-import { GoogleLogout } from 'react-google-login';
 import '../App.css';
 const MtubeNavbar = props => {
     const handleLogoutFailure = err => {
@@ -10,12 +9,17 @@ const MtubeNavbar = props => {
     const handleLogoutSuccess = res => {
         console.log(res);
     }
+    
+    const logstyle = {
+        color:"white"
+    }
+
     return (<>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
 
-            <h2 class="material-icons" style={{ "fontSize": "45px", "textDecoration": "none", "marginLeft": "4%", "marginRight": "1%", "paddingTop": "0.5rem" }}>
-                emoji_food_beverage
-</h2>
+            <h2 class="material-icons" style={{ "fontSize": "45px", "textDecoration": "none", "marginLeft": "4%", "marginRight": "1%", "paddingTop": "0.5rem" }}>emoji_food_beverage
+            </h2>
+            
             <Link class="navbar-brand" className="react" to="/" style={{ "fontSize": "45px", "fontWeight": "600", "marginRight": "40%", "textDecoration": "none" }}> Foodify</Link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -31,20 +35,15 @@ const MtubeNavbar = props => {
                     <NavLink class="nav-item nav-link pro" href="#" className="pro" to="/orders" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Orders</NavLink>
 
                     <NavLink class="nav-item nav-link pro" href="#" className="pro" to="/Cart" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Cart</NavLink>
-                    <div className="logout_button" class="nav-item nav-link logout_button">
-                        <GoogleLogout clientId={config.CLIENT_ID}
-                            buttonText="Logout"
-                            onLogoutSuccess={handleLogoutSuccess}
-                            onFailure={handleLogoutFailure} />
+                    
+                    <Link to="/login" style={logstyle}>
+                    <div className="login_button" class=" login_button">
+                        <span className="logtxt">LOGIN</span>
                     </div>
-
+                    </Link>
                 </div>
             </div>
         </nav>
-
-
-
-
 
     </>
     );
