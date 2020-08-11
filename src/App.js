@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Section from './components/Section';
@@ -8,43 +8,48 @@ import HomePage from './pages/HomePage';
 import ProfilePage from './pages/ProfilePage';
 // login:
 import LoginPage from './pages/LoginPage';
-// import { useStateValue } from "./StateProvider"
-import { auth } from "./firebase"
-//import SearchResultPage from './pages/SearchResultPage';
+import fire from './config/fire'
 import './App.css';
-import { Login } from "./components/login/index"
 
-function App() {
-  // const [{ basket }, dispatch] = useStateValue();
+class App extends Component {
 
-  useEffect(() => {
-    auth.onAuthStateChanged((authUser) => {
-      if (authUser) {
+  constructor(props){
+    super(props);
+    this.state ={
+      user:{},
+    }
+  }
 
-      } else {
-
+  componentDidMount(){
+    this.authListener();
+  }
+  
+  authListener() {
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user });
+      }else{
+        this.setState({ user: null });
       }
-    })
-  }, [])
+    });
+  }
 
-  return (
-    <div className="App">
-      <Router>
-
-        <Switch>
-
-          <Route exact path="/login" exact component={LoginPage} />
-          <Route exact path="/profile" exact component={ProfilePage} />
-          <Route path="/" component={HomePage} />
-         
-          {/* <Redirect to="/" /> */}
-          {/* // <Route exact path='/search/:searchQuery' component={SearchResultPage} />*/}
-        </Switch>
-      </Router>
-
-      {/* <Login /> */}
-    </div>
-  );
+  render(){
+    return (
+      <div className="App">
+        {/* {this.state.user ? (<HomePage />) : (<LoginPage />)}         */}
+        <Router>
+          <Switch>
+            <Route exact path="/login" exact component={LoginPage} />
+            <Route exact path="/profile" exact component={ProfilePage} />
+            <Route path="/" component={HomePage} />          
+            {/* <Redirect to="/" /> */}
+            {/* // <Route exact path='/search/:searchQuery' component={SearchResultPage} />*/}
+          </Switch>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;

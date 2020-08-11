@@ -1,6 +1,6 @@
 import firebase from "firebase";
 
-const firebaseApp = firebase.initializeApp({
+const config = {
   apiKey: "AIzaSyCl8z2-YywDYxuRCe4qpOOP4q5b3xBvqOo",
   authDomain: "food-app-adf00.firebaseapp.com",
   databaseURL: "https://food-app-adf00.firebaseio.com",
@@ -9,8 +9,8 @@ const firebaseApp = firebase.initializeApp({
   messagingSenderId: "642032818567",
   appId: "1:642032818567:web:455786866d2135bb48db22",
   measurementId: "G-G3HEKK4JXK"
-});
+};
 
-const auth = firebase.auth();
+const fire = firebase.initializeApp(config);
 
-export { auth };
+export default fire;

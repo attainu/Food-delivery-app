@@ -1,61 +1,69 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import '../App.css'
 import './Login.css'
 import Navbar from '../components/Navbar';
-import { Link, useHistory } from "react-router-dom";
-import { auth } from "../firebase";
-import loginImg from "../undraw_hey_email_liaa.svg"
-//import { Navbar } from 'reactstrap';
+import fire from '../config/fire'
 
-function LoginPage() {
-    const history = useHistory();
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+class LoginPage extends Component {
+    
+    constructor(props) {
+        super(props);
+        this.login = this.login.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.signup = this.signup.bind(this);
+        this.state = {
+          email:'',
+          password:''
+        }
+      }
 
-    const login = event => {
-        event.preventDefault();//this stops refresh
-        //do the login logic...
+      login(e) {
+        e.preventDefault();
+        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
+        }).catch((error) => {
+            console.log(error);
+          });
+      }
+    
+      signup(e){
+        e.preventDefault();
+        fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
+        .catch((error) => {
+            console.log(error);
+          })
+      }
+    
+      handleChange(e){
+        this.setState({ [e.target.name]: e.target.value });
+      }
 
-        auth.signInWithEmailAndPassword(email, password)
-            .then((auth) => {
-                // logged in, redirect to homepage...
-                history.push("/");
-            })
+    render() {
+        return (
+            <>
+              <Navbar />
+              <div className="login">
+                <h3>LoginPage</h3>
+    
+                <div className="login__container">
+                <img height="250px" src="https://edfone.com/themes/edbox/images/sl-avatar.svg" alt=""/> 
+                    <h1>User Login</h1>
+           
+                    <form>
+                        <h5>E-mail</h5>
+                        <input value={this.state.email} onChange={this.handleChange} type="email" name="email" placeholder="Enter email" />
+
+                        <h5>Password</h5>
+                        <input value={this.state.password} onChange={this.handleChange} type="password" name="password" />
+
+                        <button type="submit" className="login__signInButton" onClick={this.login}>Sign In</button>                                    
+                    </form>
+                    <br/>
+                    <button className="login__registerButton" onClick={this.signup}>Don't have an account?sign up here</button>
+                </div>        
+              </div>                    
+           </>
+        )
     }
-
-    const register = (event) => {
-        event.preventDefault();//this stops refresh!!!
-        // do the register logic
-
-        auth.createUserWithEmailAndPassword(email, password)
-            .then(auth => {
-                //created a user and logged in, redirect to home page
-                history.push("/")
-            })
-            .catch((e) => alert(e.message));
-    }
-
-    return (<>
-        <Navbar />
-        <div className="login">
-
-
-            <div className="login__container">
-                <img height="250px" src="https://edfone.com/themes/edbox/images/sl-avatar.svg" alt="" />
-                <h1>User Login</h1>
-
-                <form>
-                    <h5>E-mail</h5>
-                    <input value={email} onChange={event => setEmail(event.target.value)} type="email" />
-                    <h5>Password</h5>
-                    <input value={password} onChange={event => setPassword(event.target.value)} type="password" />
-                    <button onClick={login} type="submit" className="login__signInButton">Sign In</button>
-                </form>
-                <br />
-                <button onClick={register} className="login__registerButton">Don't have an account?sign up here</button>
-            </div>
-        </div>
-    </>
-    )
 }
+
 export default LoginPage;
