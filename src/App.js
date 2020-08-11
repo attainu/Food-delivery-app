@@ -5,6 +5,7 @@ import Section from './components/Section';
 import Footer from './components/footer';
 import Search from './components/Search';
 import HomePage from './pages/HomePage';
+import ProfilePage from './pages/ProfilePage';
 // login:
 import LoginPage from './pages/LoginPage';
 // import { useStateValue } from "./StateProvider"
@@ -20,7 +21,7 @@ function App() {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
 
-      }else{
+      } else {
 
       }
     })
@@ -29,17 +30,18 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
+
         <Switch>
-          <Route exact path="/" component={HomePage} />          
-          <Route path="/login" component={LoginPage}/>
+
+          <Route exact path="/login" exact component={LoginPage} />
+          <Route exact path="/profile" exact component={ProfilePage} />
+          <Route path="/" component={HomePage} />
+         
           {/* <Redirect to="/" /> */}
-          {/* // <Route exact path='/search/:searchQuery' component={SearchResultPage} />*/}    
+          {/* // <Route exact path='/search/:searchQuery' component={SearchResultPage} />*/}
         </Switch>
-      </Router>      
-      <Section />     
-      <Search />
-      <Footer />
+      </Router>
+
       {/* <Login /> */}
     </div>
   );
