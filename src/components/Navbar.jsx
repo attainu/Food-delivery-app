@@ -25,6 +25,7 @@ const MtubeNavbar = props => {
 
                 <a href="#" style={{ "color": "white", "marginLeft": "1rem" }} > Hello, Gigib Hadid </a>
                 <a href="#" style={{ "color": "white", "marginLeft": "1rem" }} > Orders </a>
+        {/* cart */}
                 <a href="#" style={{ "color": "white", "marginLeft": "1rem" }} > Cart </a>
 
             </button>
@@ -32,9 +33,13 @@ const MtubeNavbar = props => {
                 <div class="navbar-nav" style={{ "color": "white" }}>
 
                     <NavLink class="nav-item nav-link active pro" href="#" className="pro" to="/profile" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Menu<span class="sr-only">(current)</span></NavLink >
+                {/*orders  */}
                     <NavLink class="nav-item nav-link pro" href="#" className="pro" to="/orders" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Orders</NavLink>
-
-                    <NavLink class="nav-item nav-link pro" href="#" className="pro" to="/Cart" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Cart</NavLink>
+                {/* cart */}
+                    <NavLink class="nav-item nav-link pro" href="#" className="pro carts" to="/Cart" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400",      "listStyle":"none","margin-top":"2px", "padding":"5px", "background-color":"#e67e22", "width":"130px", "text-align": "center", "height": "50px", "border-radius": "5px" }}>
+                        <ion-icon name="basket" style={{"padding-right": "5px","font-size":"30px"}}></ion-icon>
+                        Cart-<span>0</span>
+                    </NavLink>
 
                     <Link to="/login" style={logstyle}>
                         <div className="login_button" class=" login_button">

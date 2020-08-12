@@ -36,10 +36,10 @@ class App extends Component {
 
   render(){
     return (
-      <div className="App">
-        {/* {this.state.user ? (<HomePage />) : (<LoginPage />)}         */}
+      <div className="App">                        
         <Router>
           <Switch>
+            {/* {this.state.user ? (<HomePage />) : (<LoginPage />)} */}
             <Route exact path="/login" exact component={LoginPage} />
             <Route exact path="/profile" exact component={ProfilePage} />
             <Route path="/" component={HomePage} />          

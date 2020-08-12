@@ -28,7 +28,7 @@ class HomePage extends Component{
         return (
             <div>
                 <Navbar />
-                <button onClick={this.logout}>Logout</button>
+                {/* <button onClick={this.logout}>Logout</button> */}
                 <Section />
                 <Search />        
                 <Footer />
