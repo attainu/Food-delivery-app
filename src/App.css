@@ -51,10 +51,23 @@
     margin-left: 50px;
     font-size: 25px;
     background-color: #3498db;
-    width: 100px;
+    width: 200px;
     height: 40px;
     text-align: center;
     border-radius: 5px;
   }
 
-/* carts */
+/* logout button */
+ .logoutButton{
+  font-size: 25px;
+  background-color: #e74c3c;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  color: aliceblue;
+  border: aliceblue;
+  margin-left: 81.5vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ }

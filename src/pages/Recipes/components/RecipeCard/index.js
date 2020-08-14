@@ -4,15 +4,18 @@ import { Card, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 class RecipeCard extends Component {
+        
     state = {
         redirect: false
     }
+
     redirect(rId) {
         if (this.state.redirect) {
             let path = `/recipe/${rId}`;
             return <Redirect push to={path} />
         }
     }
+
     favouriteIt() {
         this.props.dispatch({ type: 'ADD_TO_FAVORITES', payload: this.props.recipe })
     }
@@ -20,6 +23,7 @@ class RecipeCard extends Component {
     removeFromFavour() {
         this.props.dispatch({ type: 'REMOVE_FROM_FAVOURITES', payload: this.props.recipe.recipe_id });
     }
+    
     render() {
         let { recipe_id, title, image_url } = this.props.recipe;
         return (

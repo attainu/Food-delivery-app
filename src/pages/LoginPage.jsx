@@ -53,12 +53,12 @@ class LoginPage extends Component {
                         <input value={this.state.email} onChange={this.handleChange} type="email" name="email" placeholder="Enter email" />
 
                         <h5>Password</h5>
-                        <input value={this.state.password} onChange={this.handleChange} type="password" name="password" />
+                        <input value={this.state.password} onChange={this.handleChange} type="password" name="password" placeholder="Enter password" />
 
-                        <button type="submit" className="login__signInButton" onClick={this.login}>Sign In</button>                                    
+                        <button type="submit" className="login__signInButton" onClick={this.login}>SIGN IN</button>                                    
                     </form>
                     <br/>
-                    <button className="login__registerButton" onClick={this.signup}>Don't have an account?sign up here</button>
+                    <button className="login__registerButton" onClick={this.signup}>SIGN UP</button>
                 </div>        
               </div>                    
            </>
