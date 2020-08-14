@@ -10,14 +10,15 @@ import Section from '../components/Section';
 import Footer from '../components/footer';
 import Search from '../components/Search';
 import Menusearch from './Menusearch';
-
-class HomePage extends Component{
+import Restaurant from './../Restaurant';
+class HomePage extends Component {
     render() {
         return (
             <div>
                 <Navbar />
                 <Section />
-                <Search />        
+                <Restaurant />
+                <Search />
                 <Footer />
             </div>
         )
