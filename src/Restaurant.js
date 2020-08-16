@@ -16,9 +16,9 @@ class Restaurant extends Component {
     }
     render() {
         return (
-            <section><BrowserRouter>
-                <Search />
-
+            <section>
+            <BrowserRouter>
+                <Search />                
                 <Restaurants />
             </BrowserRouter>
             </section>

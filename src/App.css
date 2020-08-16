@@ -7,7 +7,7 @@
   font-family: 'Oregano', cursive;
   margin-right:10px;
 }
-.react,.subline{
+.react.subline{
   font-family: 'Nunito', sans-serif;
   color:rgb(48, 182, 48);
 }
