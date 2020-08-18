@@ -7,8 +7,8 @@
   justify-content: space-around;
   background: white;
   align-items: center;
-  min-width: 20%;
-  max-width: 20%;
+  min-width: 25%;
+  max-width: 25%;
 }
 
 .title{
@@ -38,13 +38,13 @@
   padding: 10px 20px;
   color: white;
   border-radius: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
-.remove{
+/* .remove{
   background-color: tomato;
   border: none;
   padding: 10px 20px;
   color: white;
   border-radius: 5px;
   margin-bottom: 15px;
-}
+} */

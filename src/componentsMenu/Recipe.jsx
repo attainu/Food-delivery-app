@@ -8,7 +8,7 @@ const Recipe = ({image, title, price}) => {
       <img className={style.image} src={image} alt="no image"/>
       <p className={style.price}>Rs{price}</p>
       <button className={style.add}>Add to Cart</button>
-      <button className={style.remove}>Remove from Cart</button>
+      {/* <button className={style.remove}>Remove from Cart</button> */}
     </div>
   )
 }

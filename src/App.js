@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Section from "./components/Section";
 import Footer from "./components/footer";
@@ -12,11 +7,12 @@ import Search from "./components/Search";
 import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage";
 import CartPage from "./pages/CartPage";
+import RestaurantPage from "./pages/RestaurantPage";
 // login:
 import LoginPage from "./pages/LoginPage";
 import fire from "./config/fire";
-import "./App.css";
 import Logout from "./components/logout";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -44,13 +40,13 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Switch>
-            {/* {this.state.user ? (<Logout />) : (<LoginPage />)}              */}
-            <Route path="/login" component={LoginPage} />
-            <Route exact path="/profile" component={ProfilePage} />
+          <Switch>                         
+            <Route exact path="/" component={HomePage} />
+            <Route path="/profile" component={ProfilePage} />
             <Route path="/cart" component={CartPage} />
-            <Route path="/restaurants">This is restaurant page</Route>
-            <Route path="/" component={HomePage} />
+            <Route path="/restaurants" component={RestaurantPage}/>
+            {this.state.user ? (<Logout />) : (<LoginPage />)}            
+            <Route path="/login" component={LoginPage} />            
           </Switch>
         </Router>
       </div>

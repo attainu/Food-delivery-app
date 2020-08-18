@@ -5,4 +5,3 @@ const keys = {
 };
 
 export default keys;
-//Sonipat ? location_details ? entity_id ? entity_type ? restaurant
