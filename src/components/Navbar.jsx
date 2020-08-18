@@ -1,56 +1,45 @@
 import React from 'react';
-import config from "../config";
+
 import { NavLink, Link } from "react-router-dom";
 import '../App.css';
-const MNavbar = props => {
-    const handleLogoutFailure = err => {
-        console.log(err);
-    };
-    const handleLogoutSuccess = res => {
-        console.log(res);
-    }
+const MNavbar = () => {
+
 
     const logstyle = {
         color: "white",
-        marginRight: '40px'
+        marginRight: '40px',
+
     }
 
     return (
         <>
-            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <nav className="navbar navbar-expand-lg navbar-light bg-dark">
 
-                <h2 class="material-icons" style={{ "fontSize": "45px", "textDecoration": "none", "marginLeft": "4%", "marginRight": "1%", "paddingTop": "0.5rem" }}>emoji_food_beverage
-                </h2>
+                <h2 className="material-icons" style={{ "fontSize": "45px", "textDecoration": "none", "marginLeft": "4%", "marginRight": "1%", "paddingTop": "0.5rem" }}>emoji_food_beverage
+            </h2>
 
-                <Link class="navbar-brand" className="react" to="/" style={{ "fontSize": "45px", "fontWeight": "600", "marginRight": "40%", "textDecoration": "none" }}> Foodify</Link>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <Link className="navbar-brand react" to="/" style={{ "fontSize": "45px", "fontWeight": "600", "marginRight": "50%", "textDecoration": "none" }}> Foodifly</Link>
 
-                    <a href="#" style={{ "color": "white", "marginLeft": "1rem" }} > Menu </a>
-                    <a href="#" style={{ "color": "white", "marginLeft": "1rem" }} > Orders </a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+
+
+                    <a href="/" style={{ "color": "white", "marginLeft": "1rem" }} > Orders </a>
                     {/* cart */}
-                    <a href="#" style={{ "color": "white", "marginLeft": "1rem" }} > Cart </a>
+                    <a href="/cart" style={{ "color": "white", "marginLeft": "1rem" }} > Cart </a>
+                    <a href="/login" style={{ "color": "white", "marginLeft": "1rem" }} > <span className="logtxt">LOGIN/SIGNUP</span> </a>
 
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav" style={{ "color": "white" }}>
-
-                        <NavLink class="nav-item nav-link active pro" href="#" className="pro" to="/profile" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Menu<span class="sr-only">(current)</span></NavLink >
+                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div className="navbar-nav" style={{ "color": "white" }}>
                         {/*orders  */}
-                        {/* <NavLink class="nav-item nav-link pro" href="#" className="pro" to="/login" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Orders</NavLink> */}
+                        <NavLink className="nav-item nav-link pro" href="#" to="/" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Orders</NavLink>
                         {/* cart */}
-                        <NavLink class="nav-item nav-link pro" href="" className="pro" to="/cart" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none", "margin-top": "2px", "padding": "5px", "background-color": "#e67e22", "width": "130px", "text-align": "center", "height": "50px", "border-radius": "5px" }}>
-                            <ion-icon name="basket" style={{ "padding-right": "5px", "font-size": "30px" }}></ion-icon>
-                        Cart-<span>0</span>
+                        <NavLink className="nav-item nav-link pro" href="#" to="/cart" style={{ "color": "white", "fontSize": "30px", "fontWeight": "400", "listStyle": "none" }}>Cart
                         </NavLink>
-                        {/* login button */}
+
                         <Link to="/login" style={logstyle}>
-                            <div className="login_button" class=" login_button">
-                                <span className="logtxt">LOGIN</span>
-                            </div>
-                        </Link>
-                        <Link to="/login" style={logstyle}>
-                            <div className="signup_button" class="signup_button">
-                                <span className="logtxt">SIGNUP</span>
+                            <div className="login_button" style={{ "marginLeft": '0px', 'background': '#008000', "marginRight": '0px' }}>
+                                <span className="logtxt">LOGIN/SIGNUP</span>
                             </div>
                         </Link>
                     </div>

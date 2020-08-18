@@ -9,6 +9,9 @@ const reducer = (state = initialState, action) => {
         case 'SET_RESTAURANTS':
             stateCopy.restaurants = action.payload;
             return stateCopy;
+        case 'LATEST_RESTAURANTS':
+            stateCopy.restaurants = action.payload;
+            return stateCopy;
         default:
             return stateCopy;
     }

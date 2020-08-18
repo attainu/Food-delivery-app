@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+//port MovieDetail from './MovieDetail';
+import { BrowserRouter } from 'react-router-dom';
 
 import './App.css';
 import { Component } from 'react'
@@ -15,9 +16,9 @@ class Restaurant extends Component {
     }
     render() {
         return (
-            <section>
-            <BrowserRouter>
-                <Search />                
+            <section><BrowserRouter>
+                <Search />
+
                 <Restaurants />
             </BrowserRouter>
             </section>

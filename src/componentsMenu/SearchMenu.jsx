@@ -3,8 +3,7 @@ import Recipe from "./Recipe";
 import "./Recipe.css";
 
 const SearchMenu = () => {
-  const API_KEY ="f32f4f4709a04f3babec34ab23e557ce" ;
-  // "c5c39410ecdb43fc91ad2d6d549d095c"
+  const API_KEY = "8cf2fe3b77824808ac7abaa4d2fd1eea";
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
@@ -20,12 +19,12 @@ const SearchMenu = () => {
     );
     const data = await response.json();
     setRecipes(data.results);
-    console.log(data.results);
+  
   };
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
-    console.log(search);
+    
   };
 
   const getSearch = (e) => {
@@ -36,9 +35,14 @@ const SearchMenu = () => {
 
   return (
     <div className="SearchMenu">
-      <h4>Hotel Name</h4>
       <form onSubmit={getSearch} className="search-form">
-        <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
+        <input
+          className="search-bar"
+          type="text"
+          value={search}
+          onChange={updateSearch}
+          placeholder="Search any food dish here"
+        />
         <button className="search-button" type="submit">
           Search
         </button>

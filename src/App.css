@@ -7,9 +7,9 @@
   font-family: 'Oregano', cursive;
   margin-right:10px;
 }
-.react.subline{
+.react,.subline{
   font-family: 'Nunito', sans-serif;
-  color:rgb(48, 182, 48);
+  color:rgb(48, 182, 48)!important;
 }
 .material-icons{
  color:rgb(48, 182, 48);
@@ -48,30 +48,20 @@
 /* login button */
   .login_button{
     margin-top: 5px;
-    margin-left: 40px;
-    font-size: 22px;
+    margin-left: 50px;
+    font-size: 25px;
     background-color: #3498db;
-    width: 100px;
-    height: 33px;
-    text-align: center;
-    border-radius: 5px;
-  }
-/* signup button */
-  .signup_button{
-    margin-top: 5px;
-    font-size: 22px;
-    background-color: #3498db;
-    width: 100px;
-    height: 33px;
+    width: 200px;
+    height: 40px;
     text-align: center;
     border-radius: 5px;
   }
 
 /* logout button */
  .logoutButton{
-  font-size: 22px;
+  font-size: 25px;
   background-color: #e74c3c;
-  width: 110px;
+  width: 120px;
   height: 40px;
   text-align: center;
   border-radius: 5px;
@@ -81,5 +71,3 @@
   margin-top: 10px;
   margin-bottom: 10px;
  }
-
- 

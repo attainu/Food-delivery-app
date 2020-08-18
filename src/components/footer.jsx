@@ -7,11 +7,11 @@ const Footer = () => {
             <div className="footertext" style={{ "color": "white", "fontWeight": "bold", "fontSize": "20px", "width": "18rem", "marginLeft": "15px", "paddingTop": "2rem" }}>Subscribe to our newsletter and get the best news directly to your inbox.
             <div style={{ "fontSize": "10px", "fontWeight": "400" }}>News and updates of new discounts and offers</div>
 
-                <form class="form-inline">
-                    <div class="form-group mb-2">
-                        <label for="staticEmail2" class="sr-only">Email</label>
-                        <input type="text" class="form-control mb-2" id="staticEmail2" placeholder="email@example.com" />
-                        <input type="submit" class="btn mb-2" style={{ "fontSize": "12px", "background": "#fd345a", "color": "white" }} value="Subscribe Newsletter" />
+                <form className="form-inline" onSubmit={() => { alert('email is successfully registered') }}>
+                    <div className="form-group mb-2">
+                        <label className="sr-only">Email</label>
+                        <input type="email" required className="form-control mb-2" id="staticEmail2" placeholder="email@example.com" />
+                        <input type="submit" className="btn mb-2" style={{ "fontSize": "12px", "background": "#fd345a", "color": "white" }} value="Subscribe Newsletter" />
 
                     </div>
 

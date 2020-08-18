@@ -9,7 +9,7 @@
 .login__container {
   background-color:lightblue;
   width: 500px;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -27,7 +27,7 @@
   margin-bottom: 5px;
 }
 
-.login__container > form > div > input {
+.login__container > form > input {
   height: 40px; 
   margin-bottom: 10px;
   background-color: white;

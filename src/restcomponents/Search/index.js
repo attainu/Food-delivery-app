@@ -10,14 +10,15 @@ class Search extends Component {
     }
     render() {
         return (
-            <section className='citySearch' style={{ marginLeft: '7%' }}><h3>Search any city to find nearby Restaurants and enjoy delicious food at your house.</h3>
-                <div className="subline" style={{ "fontWeight": "800", "fontSize": "20px", "color": "black", "paddingTop": "10px", "margin-left": "32%" }}>Order from your favourite Eatery-</div>
+            <section className='citySearch' style={{ marginLeft: '12%' }}><h3>Search any city to find nearby Restaurants and enjoy delicious food at your home.</h3>
                 <Form inline>
-                    <img src="https://image.flaticon.com/icons/svg/684/684850.svg" alt="location" style={{ "height": "35px" }} />
+                    <img src="https://image.flaticon.com/icons/svg/684/684850.svg" alt="location" style={{ "height": "35px", 'marginLeft': '-30px' }} />
                     <FormControl type="text" placeholder="Search any city" className="mr-sm-2 w-75"
                         onChange={(e) => this.setState({ query: e.target.value })} />
-                    <Link to="/profile"> <Button variant="outline-success" onClick={() => this.setState({ redirect: true })} onClick={() => this.props.setRestaurantsOnquery(this.state.query)}>Search</Button></Link>
+                    <Link to='/restaurants:search'> <Button variant="outline-success" style={{ width: '10rem' }} onClick={() => this.props.setRestaurantsOnquery(this.state.query)}>Search</Button></Link>
                 </Form>
+                <div className="subline" style={{ "fontWeight": "800", "fontSize": "20px", "color": "black", "paddingTop": "10px", "marginLeft": "28%" }}>Order from your favourite Eatery-</div>
+
             </section>
         )
     }

@@ -7,7 +7,7 @@ class Recipes extends Component {
         recipes: []
     }
     componentDidMount() {
-        console.log(this.props)
+       
         let query = this.props.match.params.query;
         axios.get(`https://forkify-api.herokuapp.com/api/search?q=${query}`)
             .then(response => {
