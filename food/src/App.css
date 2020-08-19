@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oregano&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+.pro{
+  list-style-type: none;
+  text-decoration:none;
+  font-family: 'Oregano', cursive;
+  margin-right:10px;
+}
+.react,.subline{
+  font-family: 'Nunito', sans-serif;
+  color:rgb(48, 182, 48)!important;
+}
+.material-icons{
+ color:rgb(48, 182, 48);
+
+}
+*{
+  margin:0;
+  box-sizing:border-box;
+  padding:0;
+}
+.footertext{
+  font-family: 'Roboto', sans-serif;
+}
+
+.title{
+  font-family: 'Nunito', sans-serif;
+
+}
+.card{
+  width:38rem;
+}
+@media only screen and (max-width: 600px) {
+  .man-delievering{
+    display:none
+  }
+  .section-body{
+    display:flex;
+    flex-wrap:wrap;
+    width:30rem;
+  }
+  .card{
+    width:30rem;
+  }
+}
+
+/* login button */
+  .login_button{
+    margin-top: 5px;
+    margin-left: 50px;
+    font-size: 25px;
+    background-color: #3498db;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+/* logout button */
+ .logoutButton{
+  font-size: 25px;
+  background-color: #e74c3c;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  color: aliceblue;
+  border: aliceblue;
+  margin-left: 81.5vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ }
