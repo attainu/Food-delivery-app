@@ -46,16 +46,15 @@
 }
 
 /* login button */
-  .login_button{
-    margin-top: 5px;
-    margin-left: 50px;
-    font-size: 25px;
-    background-color: #3498db;
-    width: 200px;
-    height: 40px;
-    text-align: center;
-    border-radius: 5px;
-  }
+.login_button{
+  margin-top: 5px;
+  font-size: 25px;
+  background-color: #3498db;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+}
 
 /* logout button */
  .logoutButton{

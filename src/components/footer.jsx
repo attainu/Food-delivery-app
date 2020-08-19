@@ -12,10 +12,9 @@ const Footer = () => {
                         <label className="sr-only">Email</label>
                         <input type="email" required className="form-control mb-2" id="staticEmail2" placeholder="email@example.com" />
                         <input type="submit" className="btn mb-2" style={{ "fontSize": "12px", "background": "#fd345a", "color": "white" }} value="Subscribe Newsletter" />
-
                     </div>
-
-                </form>     <a href="#top" style={{ "position": "absolute", "fontSize": "20px", "fontWeight": "600", "color": "white", "top": "110rem", "right": "10rem" }} data-toggle="tooltip" data-placement="right" title="Way to Top">/\</a>
+                </form>     
+                <a href="#top" style={{ "position": "absolute", "fontSize": "20px", "fontWeight": "600", "color": "white", "top": "110rem", "right": "10rem" }} data-toggle="tooltip" data-placement="right" title="Way to Top">/\</a>
             </div>
 
         </div>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import style from './recipe.module.css'
-
+import style from './recipe.module.css';
 
 const Recipe = ({ image, title, price, id }) => {
 
@@ -19,7 +18,6 @@ const Recipe = ({ image, title, price, id }) => {
       {remove && <button className={style.remove} variant="danger"
         onClick={() => { setShowText(!showText); setRemoveText(!remove); alert(title + ' remove from cart. your total bill amount is' + 0); }}
       >Remove from cart</button>}
-
     </div>
   )
 }

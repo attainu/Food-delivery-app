@@ -1,4 +1,4 @@
-.login {
+.signup {
   background-color: white;
   height: 100vh;
   display: flex;
@@ -6,9 +6,9 @@
   align-items: center;
 }
 
-.login__container {
+.signup__container {
   background-color:lightblue;
-  background-image: linear-gradient(#11998e, #38ef7d);
+  background-image: linear-gradient(#8A2387, #E94057, #F27121);
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -17,17 +17,17 @@
   border-radius: 10px;
 }
 
-.login__container > h1 {
+.signup__container > h1 {
   font-weight: 500;
   margin-bottom: 20px;
-  margin-left: 30%;
+  margin-left: 27%;
 }
 
-.login > form > h5 { 
+.signup > form > h5 { 
   margin-bottom: 5px;
 }
 
-.login__container > form > div > input {
+.signup__container > form > div > input {
   height: 40px; 
   margin-bottom: 10px;
   background-color: white;
@@ -35,8 +35,8 @@
   border-radius: 5px;
 }
 
-.login__signInButton {
-  background: #11998e;
+.signup__registerButton{
+  background: orange;
   border-radius: 2px;
   width: 40%;
   height:50px;
@@ -44,7 +44,6 @@
   font-family: cursive;
   border: 1px solid;
   border-radius: 5px;
-  margin-top: 40px;
+  margin-top: 15px;
   margin-left: 30%;
-  margin-bottom: 20px;
-}
+}  

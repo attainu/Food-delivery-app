@@ -39,7 +39,12 @@ const MNavbar = () => {
 
                         <Link to="/login" style={logstyle}>
                             <div className="login_button" style={{ "marginLeft": '0px', 'background': '#008000', "marginRight": '0px' }}>
-                                <span className="logtxt">LOGIN/SIGNUP</span>
+                                <span className="logtxt">LOGIN</span>
+                            </div>
+                        </Link>
+                        <Link to="/signup" style={logstyle}>                            
+                            <div className="login_button" style={{ "marginLeft": '0px', 'background': '#008000', "marginRight": '0px' }}>
+                                <span className="logtxt">SIGNUP</span>
                             </div>
                         </Link>
                     </div>
