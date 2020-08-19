@@ -3,28 +3,28 @@ import Recipe from "./Recipe";
 import "./Recipe.css";
 
 const SearchMenu = () => {
-  const API_KEY = "8cf2fe3b77824808ac7abaa4d2fd1eea";
+  const API_KEY = "02b6202151ae40a08f1a59440fdbac36";
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("-");
 
   useEffect(() => {
+    const getRecipes = async () => {
+      const response = await fetch(
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${query}`
+      );
+      const data = await response.json();
+      setRecipes(data.results);
+    };
     getRecipes();
   }, [query]);
 
-  const getRecipes = async () => {
-    const response = await fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${query}`
-    );
-    const data = await response.json();
-    setRecipes(data.results);
-  
-  };
+
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
-    
+
   };
 
   const getSearch = (e) => {
