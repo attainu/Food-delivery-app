@@ -8,7 +8,7 @@ class Menupage extends Component {
             <div id="menu">
                 <Navbar />
                 <h2 style={{ "color": '#e67e22', 'textAlign': 'center' }}>Order From Your Favourite Restaurant</h2>
-                <h5 style={{ "color": '#e67e22', 'textAlign': 'center' }}>Here is the Menu, type your desired food items</h5>
+                <h5 style={{ "color": '#e67e22', 'textAlign': 'center' }}>Here is the Menu, type food items you want to order</h5>
                 <SearchMenu />
 
             </div>

@@ -11,7 +11,7 @@ const Section = () => {
 Our restaurants and food delivery chains have launched systems to limit contact between food delivery persons and customers and have listed the steps on their websites and apps.
 <br />
 It is also advisable to hang a carry bag outside the main door of your house so that the delivery person can leave the food in it.</div>
-                <a href="/menu" type="button" className="card-link btn btn-success" style={{ "marginLeft": "7%" }}>Order Now</a>
+                <a href="/menu" type="button" className="card-link btn btn-success" style={{ "marginLeft": "7%" }}>Order </a>
             </div>
 
         </div>
