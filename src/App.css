@@ -55,6 +55,9 @@
     .btn-outline-success{
 width:18vw !important;
     }
+    .titl{
+      font-size: 50px !important;
+    }
   .section-body{
     display:flex;
     flex-wrap:wrap;

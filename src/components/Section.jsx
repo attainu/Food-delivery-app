@@ -4,7 +4,7 @@ const Section = () => {
     return (<div>
         <div className="card section">
             <div className="card-body section-body">
-                <h6 className="card-subtitle mb-2" style={{ "color": "green", "fontSize": "90px", "fontWeight": "400", "marginLeft": "7%", "display": 'inline-block' }}>Safe Food <br />Delivery</h6><img src="https://www.fixlastmile.com/wp-content/uploads/2020/04/food-delivery-safety-in-covid-19-main_image.png" alt="man-delivering" className="card-img-left man-delievering" style={{ "height": "300px", "width": 'auto', "marginLeft": "15%", "marginTop": "-7%" }} />
+                <h6 className="card-subtitle mb-2 titl" style={{ "color": "green", "fontSize": "90px", "fontWeight": "400", "marginLeft": "7%", "display": 'inline-block' }}>Safe Food <br />Delivery</h6><img src="https://www.fixlastmile.com/wp-content/uploads/2020/04/food-delivery-safety-in-covid-19-main_image.png" alt="man-delivering" className="card-img-left man-delievering" style={{ "height": "300px", "width": 'auto', "marginLeft": "15%", "marginTop": "-7%" }} />
 
 
                 <div className="card-text subt" style={{ "color": "black", "marginLeft": "7%", "fontWeight": "700" }}><h6 className="card-text subh" style={{ "fontWeight": "800", "fontSize": "30px" }}> We Opt for No-Contact Delivery</h6>
