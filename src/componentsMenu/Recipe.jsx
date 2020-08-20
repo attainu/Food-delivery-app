@@ -12,11 +12,11 @@ const Recipe = ({ image, title, price, id }) => {
       <img className={style.image} src={image} alt="noimg" />
       <p className={style.price}>Rs{price}</p>
       {showText && <button className={style.add} variant="success"
-        onClick={() => { setShowText(!showText); setRemoveText(!remove); alert(title + ' added to cart. your total bill amount is' + price); }}
+        onClick={() => { setShowText(!showText); setRemoveText(!remove); alert(title + ' added to cart. your total bill amount is ' + price); }}
       >Add to cart</button>}
 
       {remove && <button className={style.remove} variant="danger"
-        onClick={() => { setShowText(!showText); setRemoveText(!remove); alert(title + ' remove from cart. your total bill amount is' + 0); }}
+        onClick={() => { setShowText(!showText); setRemoveText(!remove); alert(title + ' remove from cart. your total bill amount is ' + 0); }}
       >Remove from cart</button>}
     </div>
   )

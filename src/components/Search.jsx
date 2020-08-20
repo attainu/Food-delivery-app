@@ -15,7 +15,7 @@ class Search extends Component {
     render() {
         return (
             <><div className="card mb-3" style={{ "width": '100%' }}>
-                <img className="card-img-top" style={{ "width": '100%', "height": '30rem' }} src="https://s3.amazonaws.com/thumbnails.venngage.com/template/9efa693f-2f7b-4d70-b060-8ba87f5354e3.png" alt="cardimagecap" />
+                <img className="card-img-top" style={{ "width": '100%', "height": 'auto' }} src="https://s3.amazonaws.com/thumbnails.venngage.com/template/9efa693f-2f7b-4d70-b060-8ba87f5354e3.png" alt="cardimagecap" />
             </div>
 
             </>

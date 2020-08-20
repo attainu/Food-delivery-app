@@ -23,7 +23,7 @@ class LoginPage extends Component {
     });
   };
 
-  validate = () => {    
+  validate = () => {
     let emailError = "";
     let passwordError = "";
 
@@ -34,8 +34,9 @@ class LoginPage extends Component {
     if (!this.state.email) {
       emailError = "name cannot be blank";
     }
+
     // password error
-    if(this.state.password.length < 8){
+    if (this.state.password.length < 8) {
       passwordError = "password is small";
     }
     if (!this.state.password) {
@@ -52,11 +53,15 @@ class LoginPage extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+
     const isValid = this.validate();
     if (isValid) {
       console.log(this.state);
       // clear form
       this.setState(initialState);
+      alert('Welcome to Foodifly')
+      window.location.replace('/')
+
     }
   }
 
@@ -65,7 +70,7 @@ class LoginPage extends Component {
       <>
         <Navbar />
         <div className="login">
-          <h3>LoginPage</h3>
+         
 
           <div className="login__container">
             <img height="250px" src="https://edfone.com/themes/edbox/images/sl-avatar.svg" alt="" />
@@ -74,24 +79,25 @@ class LoginPage extends Component {
             <form onSubmit={this.handleSubmit}>
               <h5>E-mail</h5>
               <div>
-                  <input type="email" name="email" placeholder="Enter email" value={this.state.email} onChange={this.handleChange} />
-                  <div style={{ fontSize: 12, color: "red" }}>
-                    {this.state.emailError}
-                  </div>
+                <input type="email" name="email" placeholder="Enter email" value={this.state.email} onChange={this.handleChange} />
+
+                <div style={{ fontSize: 12, color: "red" }}>
+                  {this.state.emailError}
+                </div>
               </div>
 
               <h5>Password</h5>
               <div>
-                  <input type="password" name="password" placeholder="Enter password" value={this.state.password}
-                  onChange={this.handleChange}/>
-                  <div style={{ fontSize: 12, color: "red" }}>
-                    {this.state.passwordError}
-                  </div>
+                <input type="password" name="password" placeholder="Enter password" value={this.state.password}
+                  onChange={this.handleChange} />
+                <div style={{ fontSize: 13, color: "red" }}>
+                  {this.state.passwordError}
+                </div>
               </div>
 
               <button type="submit" className="login__signInButton">SIGN IN</button>
 
-            </form>            
+            </form>
           </div>
         </div>
       </>

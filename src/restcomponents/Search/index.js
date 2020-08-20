@@ -17,7 +17,7 @@ class Search extends Component {
                         onChange={(e) => this.setState({ query: e.target.value })} />
                     <Link to='/restaurants:search'> <Button variant="outline-success" style={{ width: '10rem' }} onClick={() => this.props.setRestaurantsOnquery(this.state.query)}>Search</Button></Link>
                 </Form>
-                <div className="subline" style={{ "fontWeight": "800", "fontSize": "20px", "color": "black", "paddingTop": "10px", "marginLeft": "28%" }}>Order from your favourite Eatery-</div>
+                <div className="subline order" style={{ "fontWeight": "800", "fontSize": "20px", "color": "green", "paddingTop": "10px", "marginLeft": "25%" }}>Order from your favourite Eatery-</div>
 
             </section>
         )
