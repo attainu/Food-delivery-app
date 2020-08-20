@@ -20,8 +20,6 @@ const SearchMenu = () => {
     getRecipes();
   }, [query]);
 
-
-
   const updateSearch = (e) => {
     setSearch(e.target.value);
 
